@@ -1,5 +1,7 @@
 def my_select(collection)
-  new_array = []
-  new_array << yield(collection)
-  return new_array
+  if collection.length == 0
+    puts "This block should not run!"
+  else 
+    return yield(collection)
+  end
 end
